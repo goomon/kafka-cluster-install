@@ -9,7 +9,7 @@ curl -O https://archive.apache.org/dist/kafka/2.8.0/kafka_2.12-2.8.0.tgz
 tar xvf kafka_2.12-2.8.0.tgz
 rm -rf kafka_2.12-2.8.0.tgz
 
-sudo mv /kafka-cluster-install/broker3/server.properties kafka_2.12-2.8.0/config/server.properties
+sudo mv /kafka-cluster-install/broker-03/server.properties kafka_2.12-2.8.0/config/server.properties
 
 # Run kafka
 export KAFKA_JMX_OPTS='-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false 
