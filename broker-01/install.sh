@@ -9,7 +9,6 @@ curl -O https://archive.apache.org/dist/kafka/2.8.0/kafka_2.12-2.8.0.tgz
 tar xvf kafka_2.12-2.8.0.tgz
 rm -rf kafka_2.12-2.8.0.tgz
 
-cd kafka_2.12-2.8.0
 sudo mv /kafka-cluster-install/broker1/server.properties kafka_2.12-2.8.0/config/server.properties
 
 # Run kafka
