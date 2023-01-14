@@ -1,8 +1,8 @@
 #!/bin/bash
 # Install Java11
 sudo yum install -y java-11-openjdk-devel.x86_64
-echo "export JAVA_HOME=$(readlink -f  $(which java) | sed 's|/bin/java||' | sed 's/^ //g')" >> ~/.bash_profile
-source ~/.bash_profile
+echo "export JAVA_HOME=$(readlink -f  $(which java) | sed 's|/bin/java||' | sed 's/^ //g')" >> /etc/profile
+source /etc/profile
 
 # Install kafka
 curl -O https://archive.apache.org/dist/kafka/2.8.0/kafka_2.12-2.8.0.tgz 
@@ -10,7 +10,7 @@ tar xvf kafka_2.12-2.8.0.tgz
 rm -rf kafka_2.12-2.8.0.tgz
 
 cd kafka_2.12-2.8.0
-mv /kafka-cluster-install/broker3/server.properties kafka_2.12-2.8.0/config/server.properties
+sudo mv /kafka-cluster-install/broker3/server.properties kafka_2.12-2.8.0/config/server.properties
 
 # Run kafka
 export KAFKA_JMX_OPTS='-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false 
